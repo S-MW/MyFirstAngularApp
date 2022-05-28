@@ -13,4 +13,5 @@ export class LoginComponent implements OnInit {
   }
 
   loginName = "saad!"
+  age = 24;
 }
