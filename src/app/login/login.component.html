@@ -5,9 +5,9 @@
 <button (click)="showNameAndAge()">click me to show name & age</button>
 
 <h1>Choose color :</h1>
-<select style="display:block">
+<select style="display:block" #mySelect (change)="printColor(mySelect.value)">
     <ng-container *ngFor="let color of colors">
-        <option *ngIf="color != 'Red'">
+        <option value="{{color}}" *ngIf="color != 'Red'">
             {{color}}
         </option>
     </ng-container>

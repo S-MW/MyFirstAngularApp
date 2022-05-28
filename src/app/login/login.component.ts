@@ -20,4 +20,10 @@ export class LoginComponent implements OnInit {
   showNameAndAge() {
     console.log(`Your name: ${this.loginName} , Age: ${this.age}`);
   }
+
+  printColor(picked :String)
+  {
+    console.log("You are choose :" + picked);
+    
+  }
 }
