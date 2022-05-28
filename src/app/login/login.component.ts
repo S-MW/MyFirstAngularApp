@@ -15,6 +15,8 @@ export class LoginComponent implements OnInit {
   loginName = "saad!"
   age = 24;
   colors =["Blue","Red","Black"]
+  isAuth = false;
+  isAuthMessage = this.isAuth ? "logout" : "login";
 
 
   showNameAndAge() {
@@ -24,6 +26,11 @@ export class LoginComponent implements OnInit {
   printColor(picked :String)
   {
     console.log("You are choose :" + picked);
-    
+  }
+
+  changeAuth()
+  {
+    this.isAuth = ! this.isAuth;
+    this.isAuthMessage = this.isAuth ? "logout" : "login";
   }
 }

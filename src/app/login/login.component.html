@@ -15,3 +15,19 @@
 
 <h1>Update your name :</h1>
 <input type="text" [(ngModel)]="loginName">
+
+
+<button style="display:block" (click)="changeAuth()">{{isAuthMessage}}</button>
+
+<div *ngIf="isAuth;then AuthTrue else AuthFalse"></div>
+
+<ng-template #AuthTrue>
+    <p style="color: green">
+        Welecome {{loginName}}
+    </p>
+</ng-template>
+<ng-template #AuthFalse>
+    <p style="color: red">
+        Plase login
+    </p>
+</ng-template>
