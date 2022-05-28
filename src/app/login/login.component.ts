@@ -14,4 +14,10 @@ export class LoginComponent implements OnInit {
 
   loginName = "saad!"
   age = 24;
+  colors =["Blue","Red","Black"]
+
+
+  showNameAndAge() {
+    console.log(`Your name: ${this.loginName} , Age: ${this.age}`);
+  }
 }
