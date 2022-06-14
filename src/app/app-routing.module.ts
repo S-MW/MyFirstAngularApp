@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RegisterComponent } from './register/register.component';
+import { UserFormComponent } from './user-form/user-form.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,11 @@ const routes: Routes = [
   {
     path:'Register',
     component:RegisterComponent,
+    pathMatch:'full'
+  },
+  {
+    path:'user_form',
+    component:UserFormComponent,
     pathMatch:'full'
   },
   {

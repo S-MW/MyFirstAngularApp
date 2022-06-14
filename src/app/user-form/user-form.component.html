@@ -1,0 +1,17 @@
+<p>user-form works!</p>
+
+<form [formGroup]="myForm" >
+    <div>
+        <label for="id">id</label>
+        <input type="number" id="id" formControlName="id">
+    </div>
+    <div>
+        <label>name</label>
+        <input type="text" formControlName="name">
+    </div>
+    <div>
+        <label>age</label>
+        <input type="number" formControlName="age">
+    </div>
+    <input type="submit" value="Click to submit!" (click)="formSubmitFunction()">
+</form>
