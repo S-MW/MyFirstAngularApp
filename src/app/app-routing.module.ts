@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RegisterComponent } from './register/register.component';
 import { UserFormComponent } from './user-form/user-form.component';
+import { BookListComponent } from './book-list/book-list.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,11 @@ const routes: Routes = [
   {
     path:'user_form',
     component:UserFormComponent,
+    pathMatch:'full'
+  },
+  {
+    path:'books',
+    component:BookListComponent,
     pathMatch:'full'
   },
   {

@@ -1,0 +1,20 @@
+<p>book-list works!</p>
+
+<table>
+    <th>id</th>
+    <th>name</th>
+    <th>price</th>
+    <ng-container *ngFor="let itme of service.books">
+        <tr *ngIf="itme.price > 1">
+            <td>
+                {{ itme.id }}
+            </td>
+            <td>
+                {{ itme.name }}
+            </td>
+            <td>
+                {{ itme.price }}
+            </td>
+        </tr>
+    </ng-container>
+</table>

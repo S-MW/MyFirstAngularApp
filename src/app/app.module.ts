@@ -8,6 +8,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { UserFormComponent } from './user-form/user-form.component';
+import { BookListComponent } from './book-list/book-list.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -15,13 +18,15 @@ import { UserFormComponent } from './user-form/user-form.component';
     LoginComponent,
     RegisterComponent,
     PageNotFoundComponent,
-    UserFormComponent
+    UserFormComponent,
+    BookListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
