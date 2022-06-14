@@ -30,4 +30,14 @@ export class BookService {
       this.router.navigate(['/books'])
     })
   }
+
+  deleteBook(bookId: any) {
+    this.http.delete(this.url + `/${bookId}`).subscribe(res=>{
+      this.getAllBooks();
+    })
+
+
+  }
+
+
 }
