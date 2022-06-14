@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Book } from '../model/book.model';
-
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,7 +11,7 @@ export class BookService {
   books:Book[] = [];
   // bbb:any[]= [];
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient,public router: Router) { }
 
   getAllBooks()
   {
@@ -21,5 +21,13 @@ export class BookService {
       this.books = res as Book[];      
       // this.bbb = res as any[];  // This approach will work also
     });
+  }
+
+  saveBook(value: Book) 
+  {
+    this.http.post(this.url,value).subscribe(res=>{
+      console.log(res);
+      this.router.navigate(['/books'])
+    })
   }
 }
