@@ -5,7 +5,8 @@ import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RegisterComponent } from './register/register.component';
 import { UserFormComponent } from './user-form/user-form.component';
-import { BookListComponent } from './book-list/book-list.component';
+import { BookListComponent } from './book/book-list/book-list.component';
+import { CreateBookComponent } from './book/create-book/create-book.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,11 @@ const routes: Routes = [
   {
     path:'books',
     component:BookListComponent,
+    pathMatch:'full'
+  },
+  {
+    path:'books/create',
+    component:CreateBookComponent,
     pathMatch:'full'
   },
   {

@@ -8,8 +8,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { UserFormComponent } from './user-form/user-form.component';
-import { BookListComponent } from './book-list/book-list.component';
+import { BookListComponent } from './book/book-list/book-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CreateBookComponent } from './book/create-book/create-book.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     PageNotFoundComponent,
     UserFormComponent,
-    BookListComponent
+    BookListComponent,
+    CreateBookComponent
   ],
   imports: [
     BrowserModule,
