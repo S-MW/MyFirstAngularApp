@@ -17,7 +17,7 @@
                 {{ itme.price }}
             </td>
             <td>
-                <button>view</button>
+                <button (click)="showBook(itme.id)">view</button>
                 <button>Edit</button>
                 <button (click)="deleteBook(itme.id)">Delete</button>
             </td>

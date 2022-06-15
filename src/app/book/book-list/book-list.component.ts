@@ -19,4 +19,9 @@ export class BookListComponent implements OnInit {
     this.service.deleteBook(bookId);
   }
 
+  showBook(bookId:string)
+  {
+    this.service.showBook(bookId);
+  }
+
 }

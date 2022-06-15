@@ -39,5 +39,18 @@ export class BookService {
 
   }
 
+  showBookTest:any;
+
+  showBook(bookId: string) {
+    this.http.get(this.url + `/${bookId}`).subscribe(res=>{
+      console.log(res);
+
+      this.showBookTest = res as any; 
+
+      alert('name: ' + this.showBookTest.name + '.  price:' + this.showBookTest.price )
+      
+    })
+  }
+
 
 }
